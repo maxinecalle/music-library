@@ -1,0 +1,186 @@
+/* ==========================================================================
+   FOR MUSIC DASHBOARD
+   ========================================================================== */
+
+$spotify-green: #1db954;
+
+.music-dashboard {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row; // Aligns items side-by-side horizontally
+  flex-wrap: wrap;     // Allows buttons to wrap to a new line on smaller screens
+  align-items: flex-start;
+  gap: 1rem;         // Controls spacing between the buttons
+}
+
+.playlist-dropdown {
+
+  // Custom styling for the native dropdown button trigger
+  .dropdown-trigger {
+    display: inline-block;
+    background-color: var(--global-bg-color);
+    border: 1px solid var(--global-border-color);
+    color: var(--global-text-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none; // Hides default browser bullet triangle in Chrome/Firefox
+
+    &::-webkit-details-marker {
+      display: none; // Hides default browser bullet triangle in Safari
+    }
+
+    &:hover {
+      background-color: var(--global-footer-bg-color);
+    }
+
+    .trigger-text {
+      display: block;
+      flex-direction: column;
+      gap: 0.25rem; // Small gap between title and subtitle
+    }
+
+    .category-title {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+      line-height: 1.2;
+      margin-bottom: 0.25rem; 
+    }
+
+    .category-subtitle {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--global-text-color-light);
+      opacity: 0.8;
+    }
+  }
+
+  // Wrapper for inside contents
+  .dropdown-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    animation: slideDown 0.3s ease-out;
+    padding: 1em;
+    background-color: var(--global-footer-bg-color);
+    border-radius: 8px;
+    width: 100%; // Spans the full width of the parent layout page when visible
+    box-sizing: border-box;
+}
+
+  .spotify-widget-frame {
+    width: 100%;
+    height: 352px;
+    border-radius: 12px;
+    display: block;
+}
+
+
+  // Adjust when open
+  &[open] {
+    width: 100%;       // Forces the open block to stretch full width
+    flex-basis: 100%;  // Guarantees flexbox gives it an entire dedicated
+  summary.dropdown-trigger {
+    background-color: var(--global-footer-bg-color);
+    border: 1px solid transparent;
+    }
+  }
+}
+
+.tag-filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;    
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  width: 100%; // Ensures the filter row claims the top space entirely
+
+  .filter-btn {
+    background-color: var(--global-footer-bg-color);
+    border: 1px solid var(--global-border-color);
+    color: var(--global-text-color);
+    padding: 0.5em 1.2em;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: var(--global-bg-color);
+      border-color: var(--global-text-color);
+    }
+
+    // Highlight class added dynamically via our script
+    &.active {
+      background-color: var(--global-base-color);
+      color: var(--global-bg-color);
+      border-color: transparent !important;
+    }
+  }
+}
+
+// Helper class to hide non-matching tag choices
+.playlist-dropdown.is-hidden,
+.spotify-album-card.is-hidden {
+  display: none !important;
+}
+
+.spotify-album-card {
+  display: inline-block;
+  width: 180px;
+  padding: 16px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.spotify-album-card a {
+  text-decoration: none;
+  display: block;
+}
+
+.spotify-album-card a:hover {
+  text-decoration: none !important;
+  display: block;
+}
+
+.spotify-album-card .album-art {
+  width: 100%; /* Spans the full width of the card container */
+  height: auto;
+  aspect-ratio: 1 / 1; /* Ensures a perfect square just like the official embed */
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.spotify-album-card .album-details {
+  margin-top: 12px;
+}
+
+.spotify-album-card .album-name {
+  color: var(--global-text-color);
+  font-size: 14px;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Prevents long titles from breaking the vertical layout */
+}
+
+.spotify-album-card .artist-name {
+  color: var(--global-text-color-light);
+  font-size: 12px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify-album-card:hover {
+  background-color: var(--global-border-color);
+  transition: background-color 0.2s ease;
+  text-decoration: none
+}

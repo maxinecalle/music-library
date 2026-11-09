@@ -1,0 +1,19 @@
+{
+	"name": "maxine's music library",
+	"short_name": "maxine's music library",
+	"description": "the spotify homepage I never had",
+	"start_url": "/",
+	"lang": "en-US",
+	"icons": [
+		{
+			"src": "/images/favicon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/favicon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

@@ -1,0 +1,23 @@
+# The following is the order of the links in the header of the website.
+#
+# Changing the order here will adjust the order and you can also add additional
+# links. Removing a link prevents it from showing in the header, but does not
+# prevent it from being included in the site.
+#
+
+main:
+
+#  - title: "Research seminar"
+#    url: /research-seminar/ 
+
+left_nav:
+  - title: "maxeeen's music library"
+    children:
+      - title: "home"
+        url: /
+      - title: "playlists"
+        url: /playlists/ 
+      - title: "yearly stats"
+        url: /yearly-stats/ 
+      - title: "spotify profile"
+        url: "https://open.spotify.com/user/maxine.bean"

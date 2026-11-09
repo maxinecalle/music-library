@@ -1,0 +1,290 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Playlists - maxine’s music library</title>
+
+
+
+<meta name="description" content="the spotify homepage I never had">
+
+
+
+
+
+
+
+  <link rel="canonical" href="http://localhost:4000/yearly-stats/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end SEO -->
+
+<!-- Open Graph protocol data (https://ogp.me/), used by social media -->
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="maxine's music library"> 
+<meta property="og:title" content="Playlists">
+
+
+
+  <meta property="og:url" content="http://localhost:4000/yearly-stats/">
+
+
+
+
+
+<!-- end Open Graph protocol -->
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="maxine's music library Feed">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+    
+
+<!-- start custom head snippets -->
+
+<!-- Support for Academicons -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
+
+<!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/images/apple-touch-icon-180x180.png"/>
+<link rel="icon" type="image/svg+xml" href="http://localhost:4000/images/favicon.svg"/>
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-32x32.png" sizes="32x32"/>
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-192x192.png" sizes="192x192"/>
+<link rel="manifest" href="http://localhost:4000/images/manifest.json"/>
+<link rel="icon" href="/images/favicon.ico"/>
+<meta name="theme-color" content="#ffffff"/>
+
+<!-- end custom head snippets -->
+
+
+    <link rel="icon" type="image/png" href="/images/favicon.ico">
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png">
+   <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512x512.png">
+   <link rel="manifest" href="/images/site.webmanifest">
+
+  </head>
+
+  <body>
+    
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="sidebar__item" style="position: fixed; top: 1rem; right: 1rem; z-index: 999; display: flex; justify-content: flex-end;">
+    <a role="button" id="theme-toggle" style="cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text);">
+      <i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i>
+      <span></span>
+    </a>
+  </div>
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+<a href="/">
+    	<img src="/images/echt.png" class="author__avatar" alt=""  fetchpriority="high" style="border: none; box-shadow: none; border-radius: 0;"/>
+</a>
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name"></h3>
+    
+    
+  </div>
+
+</div>
+
+
+  
+    
+      
+      
+      
+    
+    
+      
+
+
+<nav class="nav__list">
+  
+  <ul>
+    
+      <li>
+        
+          <span class="nav__sub-title">maxeeen's music library</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/" class="">home</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/playlists/" class="">playlists</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/yearly-stats/" class="active">yearly stats</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://open.spotify.com/user/maxine.bean" class="">spotify profile</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="page__inner-wrap" style="padding-left: 0;">
+      <section class="page__content" itemprop="text">
+        <div class="page">
+
+Under construction...
+
+</div>
+      </section>
+    </div>
+  </article>
+</div>
+
+    <script type="module" src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script>
+  function filterPlaylists(selectedTag, event) {
+    const targetBtn = event.target;
+    const allBtn = document.querySelector('.tag-filters .filter-btn:first-child');
+
+    if (selectedTag === 'all') {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      allBtn.classList.add('active');
+    } else {
+      targetBtn.classList.toggle('active');
+      allBtn.classList.remove('active');
+    }
+
+    const activeButtons = document.querySelectorAll('.filter-btn.active');
+    if (activeButtons.length === 0) {
+      allBtn.classList.add('active');
+    }
+
+    // 1. Collect the tracking variables directly from the onclick attributes instead of the text label
+    const activeTags = [];
+    document.querySelectorAll('.filter-btn.active').forEach(btn => {
+      const onclickAttr = btn.getAttribute('onclick') || '';
+      // This extracts the keyword string hidden inside the single quotes: filterPlaylists('keyword', event)
+      const match = onclickAttr.match(/filterPlaylists\(['"]([^'"]+)['"]/);
+      if (match && match[1] !== 'all') {
+        activeTags.push(match[1].toLowerCase());
+      }
+    });
+
+    // 2. MATCH AGAINST PLAYLISTS (Matches all chosen variables)
+    document.querySelectorAll('.spotify-album-card').forEach(playlist => {
+      const playlistTagsString = playlist.getAttribute('data-tags') || '';
+      const playlistTagsArray = playlistTagsString.toLowerCase().split(' ');
+
+      if (activeTags.length === 0) {
+        playlist.classList.remove('is-hidden');
+      } else {
+        const matchesAllFilters = activeTags.every(tag => playlistTagsArray.includes(tag));
+        
+        if (matchesAllFilters) {
+          playlist.classList.remove('is-hidden');
+        } else {
+          playlist.classList.add('is-hidden');
+        }
+      }
+    });
+  }
+</script>
+
+  </body>
+</html>
+

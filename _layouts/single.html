@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div class="sidebar__item" style="position: fixed; top: 1rem; right: 1rem; z-index: 999; display: flex; justify-content: flex-end;">
+    <a role="button" id="theme-toggle" style="cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text);">
+      <i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i>
+      <span></span>
+    </a>
+  </div>
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="page__inner-wrap" style="padding-left: 0;">
+      <section class="page__content" itemprop="text">
+        {{ content }}
+      </section>
+    </div>
+  </article>
+</div>
