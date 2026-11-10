@@ -349,18 +349,15 @@ toc_sticky: false
       allBtn.classList.add('active');
     }
 
-    // 1. Collect the tracking variables directly from the onclick attributes instead of the text label
     const activeTags = [];
     document.querySelectorAll('.filter-btn.active').forEach(btn => {
       const onclickAttr = btn.getAttribute('onclick') || '';
-      // This extracts the keyword string hidden inside the single quotes: filterPlaylists('keyword', event)
       const match = onclickAttr.match(/filterPlaylists\(['"]([^'"]+)['"]/);
       if (match && match[1] !== 'all') {
         activeTags.push(match[1].toLowerCase());
       }
     });
 
-    // 2. MATCH AGAINST PLAYLISTS (Matches all chosen variables)
     document.querySelectorAll('.spotify-album-card').forEach(playlist => {
       const playlistTagsString = playlist.getAttribute('data-tags') || '';
       const playlistTagsArray = playlistTagsString.toLowerCase().split(' ');
