@@ -235,56 +235,6 @@ Under construction...
 
 
 
-
-<script>
-  function filterPlaylists(selectedTag, event) {
-    const targetBtn = event.target;
-    const allBtn = document.querySelector('.tag-filters .filter-btn:first-child');
-
-    if (selectedTag === 'all') {
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      allBtn.classList.add('active');
-    } else {
-      targetBtn.classList.toggle('active');
-      allBtn.classList.remove('active');
-    }
-
-    const activeButtons = document.querySelectorAll('.filter-btn.active');
-    if (activeButtons.length === 0) {
-      allBtn.classList.add('active');
-    }
-
-    // 1. Collect the tracking variables directly from the onclick attributes instead of the text label
-    const activeTags = [];
-    document.querySelectorAll('.filter-btn.active').forEach(btn => {
-      const onclickAttr = btn.getAttribute('onclick') || '';
-      // This extracts the keyword string hidden inside the single quotes: filterPlaylists('keyword', event)
-      const match = onclickAttr.match(/filterPlaylists\(['"]([^'"]+)['"]/);
-      if (match && match[1] !== 'all') {
-        activeTags.push(match[1].toLowerCase());
-      }
-    });
-
-    // 2. MATCH AGAINST PLAYLISTS (Matches all chosen variables)
-    document.querySelectorAll('.spotify-album-card').forEach(playlist => {
-      const playlistTagsString = playlist.getAttribute('data-tags') || '';
-      const playlistTagsArray = playlistTagsString.toLowerCase().split(' ');
-
-      if (activeTags.length === 0) {
-        playlist.classList.remove('is-hidden');
-      } else {
-        const matchesAllFilters = activeTags.every(tag => playlistTagsArray.includes(tag));
-        
-        if (matchesAllFilters) {
-          playlist.classList.remove('is-hidden');
-        } else {
-          playlist.classList.add('is-hidden');
-        }
-      }
-    });
-  }
-</script>
-
   </body>
 </html>
 
